@@ -1,0 +1,32 @@
+version: '3.9'
+services:
+    nginx:
+        extends:
+            service: nginx
+            file: docker-compose.yml
+    backend:
+        extends:
+            service: backend
+            file: docker-compose.yml
+        volumes:
+            - ./backend/index.php:/var/www/public/index.php
+            - ./backend/src:/var/www/public/src
+            - ./backend/app:/var/www/public/app
+            - ./backend/lib:/var/www/public/lib
+    frontend:
+        extends:
+            service: frontend
+            file: docker-compose.yml
+    mysql:
+        extends:
+            service: mysql
+            file: docker-compose.yml
+networks:
+    default:
+        external:
+            name: web
+    bridge:
+        driver: bridge
+volumes:
+    db:
+        driver: local

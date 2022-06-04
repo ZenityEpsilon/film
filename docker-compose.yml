@@ -1,0 +1,61 @@
+version: '3.9'
+services:
+    nginx:
+        image: 'nginx:1.19'
+        restart: always
+        networks:
+            - bridge
+            - default
+        volumes:
+            - ./static:/var/www/public
+            - ./nginx/conf.d:/etc/nginx/conf.d
+            - /etc/localtime:/etc/localtime/:ro
+    backend:
+        restart: always
+        build:
+            context: backend
+            args:
+                - SYS_USER=${USER:-admin}
+                - SYS_UID=${UID:-1000}
+                - SYS_GROUP=${GROUP:-admin}
+                - SYS_GID=${GID:-1000}
+        env_file:
+            - .env
+        networks:
+            - bridge
+        volumes:
+            - /etc/localtime:/etc/localtime/:ro
+            - ./backend/.docker/php/imagemagick/policy.xml:/etc/ImageMagick-6/policy.xml
+        command: 'php-fpm'
+    frontend:
+        restart: always
+        build:
+            context: frontend
+        env_file:
+            - .env
+        command: 'npm run start'
+        networks:
+            - bridge
+    mysql:
+        restart: always
+        build:
+            context: mysql
+        env_file:
+            - .env
+        networks:
+            - bridge
+        volumes:
+            - db:/bitnami/mariadb/data
+        environment:
+            - MARIADB_DATABASE=${DB_NAME}
+            - MARIADB_USER=${DB_USER}
+            - MARIADB_PASSWORD=${DB_PASS}
+networks:
+    default:
+        external:
+            name: web
+    bridge:
+        driver: bridge
+volumes:
+    db:
+        driver: local

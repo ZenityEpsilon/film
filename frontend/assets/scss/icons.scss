@@ -1,0 +1,24 @@
+.icons {
+	display: inline-block;
+	&_tv {
+		width: 24px;
+		height: 24px;
+		fill: white;
+	}
+	&_serial {
+		width: 24px;
+		height: 24px;
+		fill: white;
+	}
+	&_loupe {
+		width: 24px;
+		height: 24px;
+		fill: white;
+		margin-top: -4px;
+	}
+	&_play {
+		width: 24px;
+		height: 24px;
+		fill: white;
+	}
+}

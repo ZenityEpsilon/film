@@ -1,0 +1,11 @@
+{
+	"name": "zenity/film",
+	"autoload": {
+		"files": [
+			"app/router.php"
+		]
+	},
+	"require": {
+        "opencck/api": "^1.1"
+    }
+}
