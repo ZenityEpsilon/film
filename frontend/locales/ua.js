@@ -13,4 +13,5 @@ export default {
 	createRoom: 'Дивитися у кімнаті',
 	roomTitle: 'Назва кімнати',
 	roomTitlePlaceholder: 'Заповніть назву',
+	roomPrivateMode: 'Приватна кімната',
 };

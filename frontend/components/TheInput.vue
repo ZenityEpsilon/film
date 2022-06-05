@@ -48,7 +48,7 @@ export default {
 <style lang="scss">
 .form {
 	&-group {
-		@apply flex flex-col;
+		@apply flex flex-col mb-5;
 	}
 	&-label {
 		@apply mb-2.5 text-xl;

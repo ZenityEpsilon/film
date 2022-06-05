@@ -13,4 +13,5 @@ export default {
 	createRoom: 'Смотреть в комнате',
 	roomTitle: 'Название команты',
 	roomTitlePlaceholder: 'Введите название',
+	roomPrivateMode: 'Приватная комната',
 };
