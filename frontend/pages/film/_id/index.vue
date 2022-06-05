@@ -53,19 +53,23 @@
 				</div>
 			</div>
 		</div>
-		<the-popup v-model="popup" :active="popup"></the-popup>
+		<the-popup v-model="popup" :active="popup">
+			<create-room></create-room>
+		</the-popup>
 	</section>
 </template>
 
 <script>
 import FilmRating from '~/components/base/FilmRating';
 import CardFilm from '~/components/base/CardFilm';
+import CreateRoom from '~/components/base/CreateRoom';
 
 export default {
 	name: 'pageFilm',
 	components: {
 		FilmRating,
 		CardFilm,
+		CreateRoom,
 	},
 	data() {
 		return {

@@ -11,4 +11,6 @@ export default {
 	country: 'Країна',
 	rooms: 'Кімнати',
 	createRoom: 'Дивитися у кімнаті',
+	roomTitle: 'Назва кімнати',
+	roomTitlePlaceholder: 'Заповніть назву',
 };

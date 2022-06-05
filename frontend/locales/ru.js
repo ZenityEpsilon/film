@@ -11,4 +11,6 @@ export default {
 	country: 'Страна',
 	rooms: 'Комнаты',
 	createRoom: 'Смотреть в комнате',
+	roomTitle: 'Название команты',
+	roomTitlePlaceholder: 'Введите название',
 };

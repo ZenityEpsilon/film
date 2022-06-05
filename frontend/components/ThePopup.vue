@@ -1,7 +1,7 @@
 <template>
 	<div class="popup" v-if="value">
 		<div class="popup-fader" @click="$emit('input', false)"></div>
-		<div class="popup-container">name</div>
+		<div class="popup-container"><slot></slot></div>
 	</div>
 </template>
 
