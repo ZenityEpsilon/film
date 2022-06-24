@@ -12,6 +12,9 @@ export default {
 	rooms: 'Комнаты',
 	createRoom: 'Смотреть в комнате',
 	roomTitle: 'Название команты',
+	roomDescription: 'Описание комнаты',
 	roomTitlePlaceholder: 'Введите название',
 	roomPrivateMode: 'Приватная комната',
+	roomFilmTitle: 'Название фильма',
+	roomFilling: 'Заполненость',
 };

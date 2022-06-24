@@ -12,6 +12,9 @@ export default {
 	rooms: 'Кімнати',
 	createRoom: 'Дивитися у кімнаті',
 	roomTitle: 'Назва кімнати',
+	roomDescription: 'Опис кімнати',
 	roomTitlePlaceholder: 'Заповніть назву',
 	roomPrivateMode: 'Приватна кімната',
+	roomFilmTitle: 'Назві фільму',
+	roomFilling: 'Заповненість',
 };
