@@ -33,7 +33,7 @@
 				</button>
 				<input type="text" class="menu-formInput" :placeholder="$t('search')" />
 			</form>
-			<nuxt-link to="profile" class="menu-profile" :class="{ 'menu-profile_visible': hidden }">
+			<nuxt-link :to="localePath('profile')" class="menu-profile" :class="{ 'menu-profile_visible': hidden }">
 				<svg class="menu-profileSVG icons icons_tv">
 					<use xlink:href="/images/icons.svg#profile"></use>
 				</svg>

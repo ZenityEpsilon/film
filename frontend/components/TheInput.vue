@@ -1,6 +1,11 @@
 <template>
 	<div class="form-group">
-		<label :for="name" class="form-label">{{ label }}</label>
+		<label :for="name" class="form-label">
+			<svg v-if="icon.name" class="form-svg icons" :class="'icons_' + icon.class">
+				<use v-bind="{ 'xlink:href': '/images/icons.svg#' + icon.name }"></use>
+			</svg>
+			{{ label }}
+		</label>
 		<input
 			:type="type"
 			:placeholder="placeholder"
@@ -35,6 +40,15 @@ export default {
 				return 'text';
 			},
 		},
+		icon: {
+			type: Object,
+			default() {
+				return {
+					name: '',
+					class: '',
+				};
+			},
+		},
 		value: {
 			type: String,
 			default() {
@@ -48,13 +62,19 @@ export default {
 <style lang="scss">
 .form {
 	&-group {
-		@apply flex flex-col mb-5;
+		@apply flex flex-col mb-8;
 	}
 	&-label {
-		@apply mb-2.5 text-xl;
+		@apply flex items-center mb-2.5 text-xl;
 	}
 	&-input {
-		@apply bg-gray-800 p-2.5;
+		@apply bg-transparent p-2.5 text-lg;
+		border-bottom: 1px solid white;
+		outline: none;
+	}
+	&-svg {
+		display: inline-block;
+		margin-right: 10px;
 	}
 }
 </style>

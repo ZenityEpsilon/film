@@ -22,6 +22,7 @@ export default {
 			items: this.$store.state.films.items,
 		};
 	},
+	middleware: ['init'],
 };
 </script>
 

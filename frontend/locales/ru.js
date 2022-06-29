@@ -17,4 +17,10 @@ export default {
 	roomPrivateMode: 'Приватная комната',
 	roomFilmTitle: 'Название фильма',
 	roomFilling: 'Заполненость',
+	login: 'Авторизация',
+	loginUsername: 'Логин',
+	loginPassword: 'Пароль',
+	loginEnter: 'Войти',
+	loginForgot: 'Забыли пароль?',
+	loginCreate: 'Создать пользователя',
 };

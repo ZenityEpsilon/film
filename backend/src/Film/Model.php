@@ -207,7 +207,7 @@ class Model {
 		$fields = [];
 		if (count($items) > 0) {
 			foreach (array_keys($items[0]) as $field) {
-				if (startsWith($field, $alias . '.')) {
+				if (\startsWith($field, $alias . '.')) {
 					$fields[] = $field;
 				}
 			}

@@ -20,7 +20,7 @@ export default {
 	css: ['~/assets/css/fonts.css', '~/assets/scss/defaults.scss', '~/assets/scss/icons.scss'],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-	plugins: ['~/plugins/components.js'],
+	plugins: ['~/plugins/sweetalert2.js', '~/plugins/axios.js', '~/plugins/api.js', '~/plugins/components.js'],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
 	components: true,
@@ -34,7 +34,11 @@ export default {
 	],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: ['@nuxtjs/i18n', '@nuxtjs/proxy'],
+	modules: ['@nuxtjs/i18n', '@nuxtjs/proxy', '@nuxtjs/axios'],
+
+	axios: {
+		//proxy: true,
+	},
 
 	proxy:
 		process.env.NODE_ENV !== 'production'

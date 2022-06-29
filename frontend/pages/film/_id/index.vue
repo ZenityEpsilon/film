@@ -95,6 +95,7 @@ export default {
 				.slice(0, 5);
 		},
 	},
+	middleware: ['init'],
 };
 </script>
 

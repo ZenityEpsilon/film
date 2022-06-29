@@ -24,6 +24,7 @@ class Router {
 
 		if (count($parts) > 1) $method = array_pop($parts);
 
+		$parts = array_map(function ($item) {return strtoupper(substr($item, 0,1)).substr($item, 1);}, $parts);
 		return [
 			'class' => implode('', [
 				'\\Film\\Controllers\\', implode('\\', $parts), 'Controller'

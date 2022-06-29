@@ -2,6 +2,12 @@ body {
 	@apply bg-gray-800 text-white leading-4 font-light;
 	//font-family: 'Ukraine', serif;
 }
+
+html,
+body {
+	height: 100%;
+}
+
 svg {
 	@apply inline-block;
 }

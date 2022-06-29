@@ -6,6 +6,6 @@
 		]
 	},
 	"require": {
-        "opencck/api": "^1.1"
-    }
+		"opencck/api": "^1.1"
+	}
 }
